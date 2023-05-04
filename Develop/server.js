@@ -1,5 +1,5 @@
-const express = require('express');
-const routes = require('./routes');
+const express = require("express");
+const routes = require("./routes");
 // import sequelize connection
 
 const app = express();
@@ -14,3 +14,8 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
+
+// DO I NEED TO USE SEQUELIZE.SYNC?
+// sequelize.sync({ force: false }).then(() => {
+//   options();
+// });
