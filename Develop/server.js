@@ -23,8 +23,5 @@ sequelize.sync({ force: false }).then(() => {
   });
 });
 
-// Ask about put route within both category and tag route files
-// Ask about onDelete CASCADE on index and general format of my index within models
-// Need to figure out Post/Put route for Product
-// Have tutor check I have done everything correctly
 // Readme.md doc, screen-cast, clean up and comment code
+// Delete one of my .gitignore files
