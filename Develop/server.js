@@ -23,5 +23,6 @@ sequelize.sync({ force: false }).then(() => {
   });
 });
 
-// Readme.md doc, screen-cast, clean up and comment code
-// Delete one of my .gitignore files
+// Readme.md doc, screen-cast, (clean up)* and add comments to code
+// (Figure out error with put route on products)*
+// (Delete one of my .gitignore files)*
