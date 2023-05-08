@@ -44,6 +44,10 @@ https://drive.google.com/file/d/1Hr170LZXgJh4grGi1paxnOqgmCtWljbp/view
 
 ## Screenshots
 
+![Screenshot1-week-13-challenge](https://user-images.githubusercontent.com/120127903/236879169-17b9f26e-a3c4-47fe-8088-f3971efe2349.png)
+
+![Screenshot2-week-13-challenge](https://user-images.githubusercontent.com/120127903/236879182-e938d80e-5931-4389-85ee-214c6ce627bd.png)
+
 ## Technologies Used
 
 This application is powered by Node.js (v16.19.1), JavaScript and SQL. It utilizes the node package manager (npm) dependencies sequelize (v6.31.0), mysql2 (v3.2.4), dotenv (16.0.3v), inquirer (v8.2.4), and chalk (v5.2.0).
