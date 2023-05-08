@@ -20,6 +20,8 @@ Category.hasMany(Product, {
 
 // Product.belongsToMany(Tag, { through: ProductTag });
 
+// OR
+
 Product.belongsToMany(Tag, {
   through: ProductTag,
   foreignKey: "product_id",
@@ -30,12 +32,15 @@ Product.belongsToMany(Tag, {
 
 // Tag.belongsToMany(Product, { through: ProductTag });
 
+// OR
+
 Tag.belongsToMany(Product, {
   through: ProductTag,
   foreignKey: "tag_id",
   onDelete: "CASCADE",
 });
 
+// Export
 module.exports = {
   Product,
   Category,

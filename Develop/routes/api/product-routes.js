@@ -1,3 +1,4 @@
+// Import
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
 
@@ -5,8 +6,7 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 
 // get all products
 router.get("/", (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+  // find all products including its associated Category and Tag data
   Product.findAll({ raw: true }).then((data) => {
     res.json(data);
   });
@@ -14,8 +14,7 @@ router.get("/", (req, res) => {
 
 // get one product
 router.get("/:id", (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+  // find a single product by its `id` including its associated Category and Tag data
   Product.findByPk(req.params.id).then((data) => {
     res.json(data);
   });
@@ -110,4 +109,5 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+// Export
 module.exports = router;
