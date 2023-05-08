@@ -32,13 +32,13 @@ Week-13 Challenge (Object-Relational-Mapping)
 
 ## Description
 
-This application uses Sequelize to interact with a MySQL database...
+This application was created so that internet retail companies can utilize a MySQL database and keep an up to date record of specific categories, products, and tags related to the sale, and inventory of their e-commerce business. This application uses Sequelize to interact with a MySQL database. The use of an ORM (object-relational-mapping) dependency (Sequelize) rather than strictly using MySQL query's helps make this particular projects code more readable and reusable, and helps further the organization of project code through destructuring of larger files into more manageable pieces. This can also help isolate bugs, keeps the code DRY, and makes code more maintainable for future development.
 
-This application was created so that business owners can view and manage the departments, roles, and employees within their company helping streamline planning and organization. The database used for this application was created with MySQL. It implements the sequelize dependency allowing for the database to be interacted with through the use of JavaScript. Although the complex file structuring and initial set up connecting tables and seeing the database made for more work than strictly seeding the database with a seeds.sql file, it did eliminate the need for long, confusing, intensive query statements.
+This project is just the beginning of a complex back end application and can be interacted with through the use of tools such as Insomnia. With Insomnia users can test the functionality of API routes written into the application code which will allow them to view current data, post new data, update data, and delete data from the database (no UI needed).
 
-Notable skills I gained and continued to cultivate while working on the application were how one would go about seeding a database strictly using MySQL, and with sequelize. Joining tables and re-creating new objects by use of the .map() function to gather desired displays of data. I also furthered my knowledge of the inquirer dependency, and accessing specific data within objects by use of dot notation.
+My main struggles with building the application had to do with the joining of tables. Specifically the relation of Product belongsToMany Tag (through ProductTag) and Tag belongsToMany Product (through ProductTag). Although these relations were fairly simple, I could see how complex they might become, especially if I was strictly set using MySQL query's.
 
-Future development for this application along with the addition of unit testing would consist of creating functionality allowing the user to update employee managers, view employees by manager, view employees by department, being able to delete departments, roles, and employees from the database, and allowing the view of the total utilized budget of a department—in other words, the combined salaries of all employees in that department. I also think it would be interesting to create some animation within the terminal, making the application more polished.
+Future development of this application could be taken further through the addition of unit testing, deciding what other areas of a business might need to be added to the database in turn furthering business growth and company organization.
 
 ## Live Screen Recording of Application Functionality
 
@@ -97,9 +97,7 @@ Features of this application include the users ability to manage the backend of 
 
 ## Usage Information
 
-Usage of this application...
-
-Usage of this application is very intuitive, once the application is started (see installation section for instructions on how to get the application set up and running), the user will then be prompted to select from various choices allowing them to either VIEW a Department, Role, or Employee table, ADD a Department, Role, or Employee to the database, or to UPDATE a particular Employee's Role. If the user chooses to ADD or UPDATE the database, their choice will then be reflected when the user then VIEWS the particular table that was UPDATED.
+Usage of this application as of now, can be seen through the running and testing of routes with applications like Insomnia or strictly through using a MySQL shell. Once the database has been created, seeded, and the server spun up (see installation section for instructions on how to get the database set up and the server running), users can interact with the database through routing of different api end points.
 
 ## Contribution Guidelines
 
