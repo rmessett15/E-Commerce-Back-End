@@ -6,24 +6,55 @@ const { Category, Product } = require("../../models");
 
 router.get("/", (req, res) => {
   // find all categories including its associated Products
-  Category.findAll({ raw: true }).then((data) => {
-    res.json(data);
-  });
+  Category.findAll({
+    attributes: ["id", "category_name"],
+    include: [
+      {
+        model: Product,
+        attributes: ["id", "product_name", "price", "stock", "category_id"],
+      },
+    ],
+  })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.get("/:id", (req, res) => {
   // find one category by its `id` value including its associated Products
-  Category.findByPk(req.params.id).then((data) => {
-    res.json(data);
-  });
+  Category.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: ["id", "category_name"],
+    include: [
+      {
+        model: Product,
+        attributes: ["id", "product_name", "price", "stock", "category_id"],
+      },
+    ],
+  })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.post("/", (req, res) => {
   // create a new category
   console.log(req.body);
-  Category.create({ category_name: req.body.category_name }).then((data) => {
-    res.json(data);
-  });
+  Category.create({ category_name: req.body.category_name })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.put("/:id", (req, res) => {
@@ -32,9 +63,13 @@ router.put("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).then((data) => {
-    res.json(data);
-  });
+  })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.delete("/:id", (req, res) => {
@@ -48,7 +83,7 @@ router.delete("/:id", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      res.json(err);
+      res.status(400).json(err);
     });
 });
 

@@ -83,17 +83,19 @@ This application is powered by Node.js (v16.19.1), Express.js (v14.17.1), JavaSc
    - Command for dotenv will be npm i dotenv
    - Command for nodemon will be npm i nodemon
 
-6. If you do not have a MySQL account, you will need to create one (see https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/).
+6. Next, you will need to make sure you have an added .env file within the root directory of your repository, within which you will pass your environmental variables specifying the database name, your MySQL username, and your MySQL password. This will need to be completed before running the application, and will allow the connection.js file to utilize your environmental variables keeping your sensitive information protected.
 
-7. Once all dependencies are installed, you will need to create the database. To do this you will need to navigate to the directory db directory containing the schema.sql file. Once there, you will need to open up a MySQL shell using the command mysql -u root -p, where you will then be prompted to enter you password. Once your password is entered you will be in the MySQL shell.
+7. If you do not have a MySQL account, you will need to create one (see https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/).
 
-8. Once in the MySQL shell you will then run the command source schema.sql. This will create the database.
+8. Once all dependencies are installed, you will need to create the database. To do this you will need to navigate to the directory db directory containing the schema.sql file. Once there, you will need to open up a MySQL shell using the command mysql -u root -p, where you will then be prompted to enter you password. Once your password is entered you will be in the MySQL shell.
 
-9. Once the database has been created, you will then need to seed the database (this will also create the model structure for the tables within the database). To do this, navigate to the root directory and run the command npm run seed. This needs to be done from the root directory because the .env file lives within the root.
+9. Once in the MySQL shell you will then run the command source schema.sql. This will create the database.
 
-10. Once the database has been seeded, you will then be able to run the command npm start from the root directory to spin up the server.
+10. Once the database has been created, you will then need to seed the database (this will also create the model structure for the tables within the database). To do this, navigate to the root directory and run the command npm run seed. This needs to be done from the root directory because the .env file lives within the root.
 
-11. From there, you can utilize applications such as Insomnia to test the functionality of the routes within the program.
+11. Once the database has been seeded, you will then be able to run the command npm start from the root directory to spin up the server.
+
+12. From there, you can utilize applications such as Insomnia to test the functionality of the routes within the program.
 
 ## Credits
 
